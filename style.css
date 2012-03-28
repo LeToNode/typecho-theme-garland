@@ -1,0 +1,480 @@
+/*  
+Theme Name: Garland Wordpress Theme
+Theme URI: http://www.jackbook.com/
+Description: Based on Themetastic for Drupal by Stefan Nagtegaal and Steven Wittens, Originally for Wordpress.com, provided by <a href="http://incoherentbabble.com/">Chris Meller</a> and <a href="http://www.jackbook.com/">www.JackBook.com</a>
+Version: 1.2
+Author: Stefan Nagtegaal and Steven Wittens
+Rebuild by: Chris Meller
+Brought to you by: Jackbook.com
+*/
+
+/**
+ * Generic elements
+ */
+
+a:link, a:visited {
+	color: #027ac6;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0062a0;
+	text-decoration: underline;
+}
+
+a:active, a.active {
+	color: #5895be;
+}
+
+body {
+	background: #edf5fa;
+	color: #494949;
+	font: 12px/170% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body.sidebar-left  #footer {
+	margin-left: -210px;
+}
+
+/* So we move the #center container over the sidebars to compensate */
+body.sidebar-left #center {
+	margin-left: -210px;
+}
+
+/* And add blanks left and right for the sidebars to fill */
+body.sidebar-left #squeeze {
+	margin-left: 210px;
+}
+
+body.sidebar-right #center {
+	margin-right: -210px;
+}
+
+body.sidebar-right #footer {
+	margin-right: -210px;
+}
+
+body.sidebar-right #squeeze {
+	margin-right: 210px;
+}
+
+body.sidebars #center {
+	margin: 0 -210px;
+}
+
+body.sidebars #footer {
+	margin: 0 -210px;
+}
+
+body.sidebars #squeeze {
+	margin: 0 210px;
+}
+
+dl {
+	margin: 0.5em 0 1em 1.5em;
+}
+
+dl dd {
+	margin: 0 0 .5em 1.5em;
+}
+
+dl dt {
+}
+
+h1 {
+	font-size: 170%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	font-size: 160%;
+	line-height: 130%;
+}
+
+h3 {
+	font-size: 140%;
+}
+
+h4 {
+	font-size: 130%;
+}
+
+h5 {
+	font-size: 120%;
+}
+
+h6 {
+	font-size: 110%;
+}
+
+hr {
+	background: #5294c1;
+	border: none;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+}
+
+img, a img {
+	border: none;
+}
+
+input {
+	color: #494949;
+	font: 12px/100% Verdana, Arial, Helvetica, sans-serif;
+}
+
+p {
+	margin: 0.6em 0 1.2em;
+	padding: 0;
+}
+
+textarea, select {
+	color: #494949;
+	font: 12px/160% Verdana, Arial, Helvetica, sans-serif;
+}
+
+.content ul {
+	margin: 0.5em 0 1em;
+	padding: 0;
+}
+
+.content ul li {
+	margin: 0.4em 0 0.4em 1.5em;
+}
+
+ul, quote, code, fieldset {
+	margin: .5em 0;
+}
+
+/**
+ * Primary navigation
+ */
+ul.primary-links {
+	float: right;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 4;
+}
+
+ul.primary-links li {
+	background: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+ul.primary-links li a, ul.primary-links li a:link, ul.primary-links li a:visited {
+	background: transparent url("images/bg-navigation-item.png") no-repeat 50% 0;
+	color: #fff;
+	display: block;
+	margin: 0 1em;
+	padding: .75em 0 0;
+}
+
+ul.primary-links li a:hover, ul.primary-links li a.active {
+	background: transparent url("images/bg-navigation-item-hover.png") no-repeat 50% 0;
+	color: #fff;
+}
+
+.nextprev {
+	margin-bottom: 60px;
+	margin-top: 10px;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+	clear: both;
+}
+
+.commentlist {
+	list-style: none;
+	margin: 1em 0 3em;
+	padding: 0;
+}
+
+.commentlist .alt {
+	background: #edf5fa;
+}
+
+.commentlist .avatar {
+	border: 1px dotted #ccc;
+	float: right;
+	margin-right: 25px;
+	padding: 2px;
+}
+
+.commentlist cite {
+	font-weight: bold;
+}
+
+.commentlist li {
+	padding: 1em 2em;
+}
+
+.menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu li li, .item-list ul li, li.leaf, .links li {
+	background: transparent url("images/menu-leaf.gif") no-repeat 0 .35em;
+	list-style-image: none;
+	list-style-type: none;
+	padding: 0 0 .3em 13px;
+}
+
+.post {
+	margin-bottom: 2em;
+	overflow: hidden;
+}
+
+#header h1, #header h1 a {
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: normal;
+	text-decoration: none;
+	text-shadow: #1659ac 0px 1px 3px;
+}
+
+#navigation {
+	background: url("images/bg-navigation.png") repeat-x 50% 100%;
+	height: 1em;
+}
+
+#s {
+	margin-bottom: 5px;
+}
+
+/* Layout and images */
+#wrapper {
+	background: url("images/body.png") #edf5fa repeat-x 50% 0;
+	height: 600px;
+}
+
+#wrapper #container {
+	margin: 0 auto;
+	max-width: 1270px;
+	padding: 0 20px;
+}
+
+/* We must define 100% width to avoid the body being too narrow for near-empty pages */
+#wrapper #container #center {
+	float: left;
+	width: 100%;
+}
+
+/* Now we add the backgrounds for the main content shading */
+#wrapper #container #center #squeeze {
+	background: url("images/bg-content.png") #fff repeat-x 50% 0;
+}
+
+#wrapper #container #center .right-corner {
+	background: transparent url("images/bg-content-right.png") no-repeat 100% 0;
+	left: 10px;
+	position: relative;
+}
+
+#wrapper #container #center .right-corner .left-corner {
+	background: transparent url("images/bg-content-left.png") no-repeat 0 0;
+	left: -10px;
+	margin-left: -10px;
+	min-height: 400px;
+	padding: 60px 25px 5em 35px;
+	position: relative;
+}
+
+#wrapper #container #footer {
+	clear: both;
+	color: #898989;
+	float: none;
+	margin: 4em 0 -3em;
+	text-align: center;
+}
+
+#wrapper #container #header {
+	height: 80px;
+}
+
+#wrapper #container #header #logo-floater {
+	position: absolute;
+}
+
+#wrapper #container #header h1, #wrapper #container #header h1 a:link, #wrapper #container #header h1 a:visited {
+	font-weight: bold;
+	line-height: 120px;
+	position: relative;
+	white-space: nowrap;
+	z-index: 2;
+}
+
+/* We ensure the sidebars are still clickable using z-index */
+#wrapper #container .sidebar {
+	float: left;
+	margin: 60px 0 5em;
+	width: 208px;
+	z-index: 2;
+}
+
+body > #wrapper #container .sidebar {
+	position: relative;
+}
+
+#sidebar-left li {
+	margin-right: 10px;
+}
+
+#sidebar-right ul {
+	margin-left: 20px;
+}
+
+#sidebar-right li ul {
+	margin-left: 0;
+}
+
+.sidebar ul {
+	margin-left: 0;
+	padding: 0;
+}
+
+.content img {
+	margin-left: 10px;
+}
+
+#comment {
+	width: 400px;
+}
+
+
+/*comments*/
+.commentlist li {
+clear:both;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+border:1px solid #ccc;
+margin-top:10px;
+padding:5px;
+} 
+.commentlist li.trackback {
+border:1px double #EDD;
+}
+
+.author a {
+font-weight:700;
+}
+
+.commentlist .body {
+margin:5px 5px 5px 20px;
+}
+
+.commentlist .body p {
+margin:10px 0 0;
+}
+
+.commentlist ul {
+border:medium none;
+margin:7px 0 0 20px;
+padding:0;
+}
+
+.commentlist {
+border:medium none;
+margin:0;
+padding:0;
+}
+
+.commenthead,.meta {
+color:#888;
+font-weight:200;
+font-size:.95em;
+}
+
+.commenthead a,.meta a {
+color:#36B;
+}
+
+.commentform {
+margin:10px 0 10px 20px;
+}
+
+#commentdiv{padding-right:8px;}
+#commentform textarea {
+border:1px solid #b0b0b0;
+}
+
+
+#reco span {
+color:#999;
+}
+
+.avatar{ width:80px; height:80px; margin-top:-32px;
+*margin-top:-26px; 
+margin-right:-4px;
+float:right; padding:0 0 5px; background-repeat:no-repeat;}
+
+.mine{
+border-color:red !important;
+}
+.borderc1{
+border-color:#663399 !important;
+}
+.borderc2{
+border-color:#ccc !important;
+}
+
+#respond{
+	padding-top:5px;
+	/*border:1px solid #ccc;*/
+}
+
+#respond .cancel-comment-reply{
+	display: none;
+}
+.commentlist li #respond .cancel-comment-reply {
+	display: inline;
+}
+
+
+/* Posts Navigation */
+ol.pages {
+	margin: 10px 0;
+	color: #666;
+	list-style: none;
+	font-size: 12px;
+}
+
+ol.pages li {
+	margin: 0 5px 0 0;
+	display: inline;
+}
+
+ol.pages li a {
+	background-position: 50% bottom; 
+	border-bottom: #ccdbe4 3px solid;
+	padding: 2px 6px;
+	margin-right: 4px;
+	text-decoration: none
+}
+
+ol.pages li.current a {
+	padding: 2px 6px;
+	font-weight: bold;
+	color: #86942A;
+	border-bottom: #86942A 3px solid;
+	margin-right: 4px;
+}
